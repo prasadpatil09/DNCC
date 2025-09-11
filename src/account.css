@@ -1,0 +1,341 @@
+/* account.css */
+.buttons-up-del{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-up{
+  padding: 10px 20px;
+  background-color:  rgba(181, 181, 12, 0.842);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+.btn-del{
+  padding: 10px 20px;
+  background-color: rgb(209, 13, 13);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.btn-up:hover{
+  scale:1.1;
+  background: linear-gradient(45deg,rgb(39, 212, 39),rgb(48, 138, 189));
+}
+.btn-del:hover{
+  scale: 1.1;
+  background: linear-gradient(45deg,rgb(104, 185, 188),rgb(232, 171, 182)
+  );
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Optional: limits the width of the card */
+  margin: auto;
+}
+
+.card p{
+    font-size: medium;
+}
+.card {
+  background-color: #03256C;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+/* Adminreq.css */
+.playercontainer{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-view {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-view h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1768AC;
+}
+
+.player-details {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.player-details p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.player-details strong {
+  color: #1768AC;
+}
+
+.admin-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #0d1b2a; /* Dark navy blue */
+  color: #e0e1dd; /* Light grayish text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-content {
+  background-color: #1b263b; /* Slightly lighter dark blue */
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.admin-content h1 {
+  color: #70e1f5; /* Bright blue accent */
+  margin-bottom: 25px;
+}
+
+.admin-player-card {
+  background-color: #415a77; /* Muted blue-gray */
+  border: 1px solid #778da9;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.admin-player-card:hover {
+  transform: scale(1.02);
+  background-color: #517ea7;
+}
+
+.admin-player-card p {
+  margin: 6px 0;
+  color: #f8f9fa;
+}
+/* Buttons container */
+.buttonsreq {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Common button styles */
+.buttonsreq button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Accept Button */
+.buttonsreq button:first-child {
+  background-color: #2ecc71;  /* Green */
+  color: white;
+}
+
+.buttonsreq button:first-child:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+/* Reject Button */
+.buttonsreq button:last-child {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+
+.buttonsreq button:last-child:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.see-more-btn {
+  width: 100%;
+  background-color: #03256C;
+  border: none;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0542a3;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    max-width: 90%;
+  }
+}
+
+.account-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color:#524948;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.account-section h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #7CB4B8;
+}
+
+.account-details {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+.add-button {
+  text-decoration: none;
+  color: #524948;
+  font-size: 14px;
+  background-color: #7CB4B8;
+  padding: 6px 12px;
+  align-self: flex-start;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.account-item {
+  background-color: #7CB4B8;
+  padding: 15px;
+  border-radius: 8px;
+  color: #524948;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.update-button {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  background-color: #57467B;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background-color: #524948;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* account.css */
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 15s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.add-account{
+  height: 100vh;
+  width: 100vw;
+ background-color: #333;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.account-form{
+  height: auto;
+  background-color: #524948;
+  z-index: 99;
+  border-radius: 10px;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+ .textname{
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+ textarea{
+  padding: 10px 20px;
+  border-radius: 3px;
+  border:none;
+}
+.account-form label{
+  color: white;
+  font-size: 1.1rem;
+}
+.btn{
+  padding: 10px 20px;
+  border: none;
+  background-color: #27ae60;
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+}

@@ -1,0 +1,104 @@
+/* ApprovePlayerForm.css */
+body{
+    background-color: #1e3557;
+}
+.wrapper{
+    height:100vh;
+}
+
+.approve-player-form {
+  background-color: #f4f6f8;
+  padding: 30px;
+  max-width: 500px;
+  height: auto;
+  margin:  50px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2e3a59;
+}
+
+.approve-player-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  color: #1e3557;
+}
+
+.approve-player-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #3b4d6b;
+}
+
+.approve-player-form input,
+.approve-player-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #cdd6e0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: border 0.3s ease;
+  font-size: 14px;
+}
+
+.approve-player-form input:focus,
+.approve-player-form select:focus {
+  border-color: #5c8fdc;
+  outline: none;
+}
+
+.approve-player-form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #437fdd;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.approve-player-form button:hover {
+  background-color: #346ac3;
+}
+/* Responsive for mobile and small screens */
+@media (max-width: 600px) {
+    .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+  .approve-player-form {
+    padding: 20px;
+    margin: 20px 15px;
+    width: 80vh;
+    border-radius: 8px;
+  }
+
+  .approve-player-form h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .approve-player-form label {
+    font-size: 14px;
+  }
+
+  .approve-player-form input,
+  .approve-player-form select {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .approve-player-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
