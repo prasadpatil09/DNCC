@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Axios from "axios";
+import "./seasonDetails.css"; // custom CSS
+
+// Map team names to logo image paths
+const teamLogos = {
+  Fighters: "/Dnccfighters.jpg",
+  SuperKings: "/Dnccsuperkings.jpg",
+  Titans: "/Dncctitan.jpg",
+  Challengers: "/Dncceagle.jpg",
+  // add more teams if needed
+};
 
 const SeasonDetails = () => {
   const { id } = useParams();
@@ -22,13 +32,30 @@ const SeasonDetails = () => {
     <div className="season-details">
       <h1>Season {season.season}</h1>
       <h2>Matches:</h2>
-      <ul>
+
+      <div className="matches-list">
         {season.matches.map((m, i) => (
-          <li key={i}>
-            {m.team1} vs {m.team2}
-          </li>
+          <div key={i} className="match-card">
+            <div className="team">
+              <img
+                src={teamLogos[m.team1] || "/images/default.png"}
+                alt={m.team1}
+              />
+              <span>{m.team1}</span>
+            </div>
+
+            <div className="vs">VS</div>
+
+            <div className="team">
+              <img
+                src={teamLogos[m.team2] || "/images/default.png"}
+                alt={m.team2}
+              />
+              <span>{m.team2}</span>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

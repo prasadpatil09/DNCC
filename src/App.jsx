@@ -17,6 +17,7 @@ import Privateplayer from './privateplayer.jsx';
 import History from './history.jsx';
 import Matchadd from './matchadd.jsx';
 import SeasonDetails from './matchesdetails.jsx';
+import Chat from './chat.jsx';
 // Create a wrapper component to use hooks inside BrowserRouter
 const AppWrapper = () => {
   const navigate = useNavigate();
@@ -93,6 +94,7 @@ const AppWrapper = () => {
           </Privateplayer>
         }
       />
+      <Route path='/home/chat' element={<PrivateRoute><Chat/></PrivateRoute>}></Route>
       <Route path="/forgotpassword" element={<Forgot />} />
       <Route path="/reset/:token" element={<Reset />} />
       <Route path='/history' element={<History/>}></Route>

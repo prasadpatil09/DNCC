@@ -51,7 +51,7 @@ const Updateacc = () => {
 
           <label>Amount:</label>
           <input type="number" className="textname" value={amount} onChange={e => setAmount(e.target.value)} required />
-
+         <br />
           <button type="submit" className='btn'>Update</button>
         </form>
       </div>

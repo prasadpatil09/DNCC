@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.chatcontainer {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  padding: 20px;
+  background-color: #ece5dd;
+  border-radius: 10px;
+
+}
+.chat{
+    width: 100%;
+    height: 70vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom:10px;
+}
+.senderchat {
+  display: flex;
+  margin-bottom: 15px;
+    justify-content: flex-end;
+    margin:20px;
+}
+.senderchat strong{
+    color: #00FFFF;
+}
+.senderchat p{
+    background-color: grey;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+.recieverchat {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+  margin:20px;
+}
+.recieverchat strong{
+    color: #295cc4;
+}
+.recieverchat p{
+    background-color: #16d328;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+.input_container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.input_container textarea {
+    width: 70%;
+    min-height: 50px;
+    max-height: 120px; /* allows multi-line growth */
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    overflow-y: auto;
+}
+.input_container button {
+    width: 20%;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(4, 170, 170);
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .input_container {
+        width: 95%;
+    }
+    .input_container textarea {
+        width: 75%;
+        font-size: 14px;
+    }
+    .input_container button {
+        width: 25%;
+        font-size: 14px;
+    }
+}
+
+.summary-box {
+  background: #f4f4f8;
+  border-left: 4px solid #007bff;
+  padding: 10px;
+  margin-bottom: 100px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.btn-summ{
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 55%;
+    position: fixed;
+    bottom: 3.4%;
+    left: 61%;
+    z-index: 100;
+   transform: translateX(-65%);
+    cursor: pointer;
+}

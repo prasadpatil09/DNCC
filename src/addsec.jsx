@@ -31,7 +31,7 @@ const Addsec = () => {
           <label>Amount Details:</label>
           <textarea value={moneyinfo} onChange={e => setMoneyinfo(e.target.value)} />
           <label>Amount:</label>
-          <input type="number" className="textname" value={amount} onChange={e => setAmount(e.target.value)} required />
+          <input type="number" className="textname" value={amount} onChange={e => setAmount(e.target.value)} required /><br/>          
           <button type="submit" className='btn'>Add</button>
         </form>
       </div>

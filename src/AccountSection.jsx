@@ -1,62 +1,70 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Axios from 'axios';
-import './account.css'; // External CSS import
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Axios from "axios";
+import "./account.css"; // styling for neon theme
 
 const AccountSection = () => {
   const [isAdmin, setIsAdmin] = useState(false);
-  const [account, setAccount] = useState([]);
+  const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:8500/home/account')
-      .then((res) => setAccount(res.data))
-      .catch((err) => console.error('Error fetching accounts:', err));
+    Axios.get("http://localhost:8500/home/account")
+      .then((res) => setAccounts(res.data))
+      .catch((err) => console.error("Error fetching accounts:", err));
   }, []);
 
   const handleDelete = (id) => {
     Axios.delete(`http://localhost:8500/home/delete/${id}`, {
-  headers: {
-    Authorization: `Bearer ${localStorage.getItem("token")}` // send the JWT
-  }
-})
-.then((res) => {
-  alert(res.data.message);
-  if (res.data.status) window.location.reload();
-})
-.catch((err) => {
-  // If you want to see server errors clearly
-  console.error(err.response?.data || err);
-  alert(err.response?.data?.message || "Error occurred");
-});
-
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => {
+        alert(res.data.message);
+        if (res.data.status) window.location.reload();
+      })
+      .catch((err) => {
+        console.error(err.response?.data || err);
+        alert(err.response?.data?.message || "Error occurred");
+      });
   };
 
   useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem('user'));
+    const userData = JSON.parse(localStorage.getItem("user"));
     if (userData?.admin) setIsAdmin(true);
   }, []);
 
   return (
-    <div id="account" className="account-section">
-      <h1>Account Section</h1>
+    <div className="account-section" id="account"  style={{padding:"20px"}}>
+      <h1 style={{color:"white"}} >Account Section</h1>
 
-      <div className="account-details">
-        {isAdmin && (
-          <Link to="/home/account-add" className="add-button">
-            + Add New
-          </Link>
-        )}
+      {isAdmin && (
+        <Link to="/home/account-add" className="add-button">
+          + Add New
+        </Link>
+      )}
 
-        {account.map((acc, index) => (
-          <div className="account-item" key={index}>
-            <p>Type: {acc.type}</p>
-            <p>Paid By: {acc.paidby}</p>
-            <p>Amount: ₹{acc.amount}</p>
-            <p>Amount Details:{acc.moneyinfo}</p>
-             <p>Date: {acc.date}</p>
-             
+      <div className="container">
+        {accounts.map((acc, index) => (
+          <div className="card" key={index}>
+            <p>
+              <b>Type:</b> {acc.type}
+            </p>
+            <p>
+              <b>Paid By:</b> {acc.paidby}
+            </p>
+            <p>
+              <b>Amount:</b> ₹{acc.amount}
+            </p>
+            <p>
+              <b>Details:</b> {acc.moneyinfo}
+            </p>
+            <p>
+              <b>Date:</b> {acc.date}
+            </p>
+
             {isAdmin && (
-              <div className="admin-actions">
+              <div className="buttons">
                 <Link
                   to={`/home/account-update/${acc._id}`}
                   className="update-button"
@@ -74,6 +82,7 @@ const AccountSection = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

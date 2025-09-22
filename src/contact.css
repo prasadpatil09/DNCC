@@ -24,6 +24,7 @@
  padding: 50px 80px;
  border-radius: 12px;
  display: flex;
+ flex-direction: column;
  border: 1px white solid;
  margin: 70px;
 }

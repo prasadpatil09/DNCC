@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
-import './login.css'
+import './forgot.css'
 
 const Forgot = () => {
     const [mail,SetMail]=useState('')

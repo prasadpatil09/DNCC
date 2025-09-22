@@ -37,7 +37,7 @@ const ContactSection = () => {
           <input type="email" value={contactmail} onChange={(e)=>{setContactmail(e.target.value)}} className="textname" name="" id="" required/>
           <label htmlFor="">MESSAGE:</label>
           <textarea name="" value={contactmessage} onChange={(e)=>{setContactmessage(e.target.value)
-          }} id="" required></textarea>
+          }} id="" required></textarea> <br />
           <button type='submit' className='btn'>Submit</button>
         </form>
       </div>

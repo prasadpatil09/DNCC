@@ -1,0 +1,94 @@
+/* account.css */
+
+/* Container for the players section */
+#players {
+  background-color: #1768AC;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Heading */
+#players h1 {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+/* Cards wrapper */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Glass card style */
+.cards .card{
+  width: 320px;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  text-align: left;
+}
+
+/* Player info text */
+.cards .card p {
+  margin: 6px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* See more button */
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4da3ff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.see-more-btn:hover {
+  background-color: #3a8dde;
+}
+
+/* Admin link */
+#players p a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#players p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .cards .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

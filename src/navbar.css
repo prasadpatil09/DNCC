@@ -1,0 +1,124 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  backdrop-filter: blur(10px); /* blur for glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: #00eaff;
+}
+
+.navbar-logo img {
+  height: 28px;
+  width: 28px;
+  margin-right: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00eaff;
+  transform: translateY(-2px);
+}
+
+/* Logout button */
+.logout-btn {
+  background: #ff4c4c;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #ff2a2a;
+  transform: translateY(-2px);
+}
+
+/* Hamburger menu icon (mobile) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #00eaff;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+.nav-links.open {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 220px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.nav-links.open li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links.open {
+    display: flex;   /* 👈 show when open */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 220px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .hamburger {
+    display: block;
+  }
+}

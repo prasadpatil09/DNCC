@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './account.css';
+import './playeraction.css';
 
 const PlayersSection = () => {
   const swiperRef = useRef(null);
@@ -50,14 +50,6 @@ const PlayersSection = () => {
   if (loading) {
     return (
       <div id="players"
-        style={{
-          height: '80vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: '#fff',
-          backgroundColor: '#1768AC'
-        }}
       >
         <p>Loading players...</p>
       </div>
@@ -67,23 +59,8 @@ const PlayersSection = () => {
   return (
     <div
       id="players"
-      style={{
-        height: '80vh',
-        backgroundColor: '#1768AC',
-        padding: '40px 0',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
     >
       <h1
-        style={{
-          color: '#FFFFFF',
-          textAlign: 'center',
-          fontSize: '35px',
-          marginBottom: '30px',
-        }}
       >
         Players Info
       </h1>

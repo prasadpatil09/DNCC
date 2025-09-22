@@ -7,32 +7,42 @@ const Matchadd = () => {
   const [team1, setTeam1] = useState("")
   const [team2, setTeam2] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (team1 === team2) {
-      alert("Team1 and Team2 cannot be the same!")
-      return
-    }
-
-    Axios.post(
-      'http://localhost:8500/create/createseason',
-      { season, team1, team2 },
-      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    )
-      .then(res => {
-        alert(res.data.message)
-      })
-      .catch(err => {
-        console.error(err)
-        alert("Something went wrong!")
-      })
+  if (team1 === team2) {
+    alert("Team1 and Team2 cannot be the same!");
+    return;
   }
+
+  const token = localStorage.getItem("token");
+  console.log("Sending token:", token);
+
+  Axios.post(
+    "http://localhost:8500/create/createseason",
+    { season, team1, team2 },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then((res) => {
+      
+      alert(res.data.message);
+    })
+    .catch((err) => {
+      console.error("Error:", err.response?.data || err.message);
+      alert(err|| "Something went wrong!");
+    });
+};
+
 
   return (
     <div className='seasonform'>
       <h1>Add new season</h1>
-      <div className='form'>
+      <div className='formadd'>
         <form onSubmit={handleSubmit}>
           <label htmlFor="season">Season no:</label>
           <input
