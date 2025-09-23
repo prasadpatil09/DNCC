@@ -8,7 +8,7 @@ const ContactSection = () => {
   const [contactmessage,setContactmessage]=useState()
   const handlesubmit=(e)=>{
    e.preventDefault()
-   Axios.post('http://localhost:8500/contact/contact-us',{ contactname,contactmail,contactmessage},).then(res=>{
+   Axios.post('https://dncc.onrender.com/contact/contact-us',{ contactname,contactmail,contactmessage},).then(res=>{
   if(res.data.status){
     alert(res.data.message)
     setContactname("")

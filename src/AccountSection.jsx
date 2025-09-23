@@ -8,13 +8,13 @@ const AccountSection = () => {
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:8500/home/account")
+    Axios.get("https://dncc.onrender.com/home/account")
       .then((res) => setAccounts(res.data))
       .catch((err) => console.error("Error fetching accounts:", err));
   }, []);
 
   const handleDelete = (id) => {
-    Axios.delete(`http://localhost:8500/home/delete/${id}`, {
+    Axios.delete(`https://dncc.onrender.com/home/delete/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },

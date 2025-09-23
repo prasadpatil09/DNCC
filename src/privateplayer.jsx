@@ -18,7 +18,7 @@ const Privateplayer = ({ children }) => {
         }
 
         // Otherwise fetch player details to check ownership
-        const res = await Axios.get(`http://localhost:8500/approve/player-view/${id}`);
+        const res = await Axios.get(`https://dncc.onrender.com/approve/player-view/${id}`);
         const player = res.data;
 
         if (player.userRef === userId) {

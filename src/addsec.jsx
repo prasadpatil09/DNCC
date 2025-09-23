@@ -11,7 +11,7 @@ const Addsec = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:8500/home/add-account',
+    Axios.post('https://dncc.onrender.com/home/add-account',
       { type, paidby, amount, moneyinfo },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     ).then(res => {

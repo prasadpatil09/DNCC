@@ -6,7 +6,7 @@ const Forgot = () => {
     const [mail,SetMail]=useState('')
     const handlesubmit=(e)=>{
          e.preventDefault();
-            Axios.post('http://localhost:8500/auth/forgot',{mail}).then(response=>{
+            Axios.post('https://dncc.onrender.com/auth/forgot',{mail}).then(response=>{
               if(response.data.status){
                 alert(response.data.message)
               }

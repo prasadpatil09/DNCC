@@ -9,7 +9,7 @@ const Chat = () => {
     const [summary, setSummary] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const endofmessage = useRef();
-    const socket = socketIOClient('http://localhost:8500');
+    const socket = socketIOClient('https://dncc.onrender.com');
 
     useEffect(() => {
         socket.on("chat", (chats) => setChats(chats));
@@ -37,7 +37,7 @@ const Chat = () => {
         setIsLoading(true);
         try {
             const textData = chats.map(c => `${c.username}: ${c.message}`).join("\n");
-            const response = await fetch("http://localhost:8500/summarizer", {
+            const response = await fetch("https://dncc.onrender.com/summarizer", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ textData })

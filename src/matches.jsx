@@ -7,7 +7,7 @@ const Matches = () => {
   const [seasons, setSeasons] = useState([]);
    const [isAdmin, setIsAdmin] = useState(false);
   const handledelete=(id)=>{
-    Axios.delete(`http://localhost:8500/create/deleteseason/${id}`, {
+    Axios.delete(`https://dncc.onrender.com/create/deleteseason/${id}`, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`, // <-- send the JWT
     },
@@ -24,7 +24,7 @@ const Matches = () => {
     }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:8500/create/getseason")
+    Axios.get("https://dncc.onrender.com/create/getseason")
       .then((res) => {
         if (res.data.status) {
           setSeasons(res.data.season);

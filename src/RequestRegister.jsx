@@ -35,7 +35,7 @@ const RequestRegister = () => {
     e.preventDefault();
 
    Axios.post(
-  'http://localhost:8500/approve/player-approval',
+  'https://dncc.onrender.com/approve/player-approval',
   {
     userid,
     playername,

@@ -19,13 +19,13 @@ const Playerview = () => {
   }, []);
 
   useEffect(() => {
-    Axios.get(`http://localhost:8500/approve/player-view/${id}`)
+    Axios.get(`https://dncc.onrender.com/approve/player-view/${id}`)
       .then(res => setPlayer(res.data))
       .catch(err => setError('Error fetching player details.'));
   }, [id]);
 
   const handleDelete = () => {
-    Axios.delete(`http://localhost:8500/approve/player-delete/${id}`, {
+    Axios.delete(`https://dncc.onrender.com/approve/player-delete/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }).then(res => {
       alert(res.data.message);

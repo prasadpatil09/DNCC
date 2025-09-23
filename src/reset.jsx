@@ -12,7 +12,7 @@ const Reset = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:8500/auth/reset/'+token, { password })
+    Axios.post('https://dncc.onrender.com/auth/reset/'+token, { password })
       .then(response => {
        if(response.data.status){
          alert(response.data.message);

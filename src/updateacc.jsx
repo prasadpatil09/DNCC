@@ -12,7 +12,7 @@ const Updateacc = () => {
   const [moneyinfo, setMoneyinfo] = useState('');
 
   useEffect(() => {
-    Axios.get(`http://localhost:8500/home/get-account/${id}`, {
+    Axios.get(`https://dncc.onrender.com/home/get-account/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     .then(res => {
@@ -27,7 +27,7 @@ const Updateacc = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     Axios.patch(
-      `http://localhost:8500/home/update-account/${id}`,
+      `https://dncc.onrender.com/home/update-account/${id}`,
       { type, paidby, amount, moneyinfo },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     ).then(res => {

@@ -34,7 +34,7 @@ const PlayersSection = () => {
 
   // Fetch approved players
   useEffect(() => {
-    Axios.get('http://localhost:8500/approve/player-request')
+    Axios.get('https://dncc.onrender.com/approve/player-request')
       .then((res) => {
         setPlayer(res.data);
         setLoading(false);

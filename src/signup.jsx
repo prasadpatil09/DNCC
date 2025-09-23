@@ -16,7 +16,7 @@ const Signup = () => {
      const handleeye2=() => SetShow(true)
      const handlesubmit=(e) => {
             e.preventDefault();
-            Axios.post('http://localhost:8500/auth/signup',{username,mail,password}).then(response=>{
+            Axios.post('https://dncc.onrender.com/auth/signup',{username,mail,password}).then(response=>{
               if(response.data.status){
                 navigate('/')
                 alert(response.data.message)

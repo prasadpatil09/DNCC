@@ -8,7 +8,7 @@ const Adminreq = () => {
   
 
     useEffect(() => {
-    Axios.get('http://localhost:8500/approve/player-req', {
+    Axios.get('https://dncc.onrender.com/approve/player-req', {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     .then(res => setPlayerreq(res.data))
@@ -16,7 +16,7 @@ const Adminreq = () => {
   }, []);
 
   const handleAccept = (id) => {
-    Axios.patch(`http://localhost:8500/approve/player-accept/${id}`, {}, {
+    Axios.patch(`https://dncc.onrender.com/approve/player-accept/${id}`, {}, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }).then(res => {
       alert(res.data.message);
@@ -25,7 +25,7 @@ const Adminreq = () => {
   }
 
   const handleReject = (id) => {
-    Axios.delete(`http://localhost:8500/approve/player-reject/${id}`, {
+    Axios.delete(`https://dncc.onrender.com/approve/player-reject/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }).then(res => {
       alert(res.data.message);

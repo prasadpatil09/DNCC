@@ -17,7 +17,7 @@ const SeasonDetails = () => {
   const [season, setSeason] = useState(null);
 
   useEffect(() => {
-    Axios.get(`http://localhost:8500/create/getseasonbyid/${id}`)
+    Axios.get(`https://dncc.onrender.com/create/getseasonbyid/${id}`)
       .then((res) => {
         if (res.data.status) {
           setSeason(res.data.season);

@@ -18,7 +18,7 @@ const Playerupdate = () => {
 
   // Fetch player details on mount
   useEffect(() => {
-    Axios.get(`http://localhost:8500/approve/player-view/${id}`)
+    Axios.get(`https://dncc.onrender.com/approve/player-view/${id}`)
       .then(res => {
         const data = res.data
         setPlayername(data.playername || "")
@@ -39,7 +39,7 @@ const Playerupdate = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     Axios.put(
-      `http://localhost:8500/approve/player-update/${id}`,
+      `https://dncc.onrender.com/approve/player-update/${id}`,
       { playername, playertype, age, matches, runs, wickets },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     )
