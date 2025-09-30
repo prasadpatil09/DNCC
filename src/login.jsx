@@ -15,7 +15,7 @@ const Login = () => {
   Axios.defaults.withCredentials=true;
   const handlesubmit=(e)=>{
         e.preventDefault()
-           Axios.post('https://dncc.onrender.com/auth/login',{username,password}).then(
+           Axios.post('https://dncc-1.onrender.com/auth/login',{username,password}).then(
             res=>{
               if(res.data.status){
                  localStorage.setItem('user',JSON.stringify({
