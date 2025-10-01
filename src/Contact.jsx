@@ -44,7 +44,7 @@ const ContactSection = () => {
      </div>
       <div className="Location">
           <h1>Our Location</h1>
-          <p>Dwarkesh Nagar, Saidham ,Sarawali, Palghar Road 401508</p>
+          <p>Dwarkesh Nagar, Saidham ,Sarawali,<br /> Palghar Road 401508</p>
         </div>
         </div>
     </div>
