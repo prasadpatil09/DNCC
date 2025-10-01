@@ -40,9 +40,8 @@
     color: white;
     font-size: 1.1rem;
     padding: 15px;
-    flex-wrap: wrap;
-    display: flex;
-    flex: 1 1 auto;
+    white-space: normal;
+  word-wrap: break-word;
 }
 @media screen and (max-width:768px) {
     .form-location{
